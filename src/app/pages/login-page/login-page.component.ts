@@ -15,10 +15,8 @@ export default class LoginPageComponent {
     private router: Router
   ){}
 
-  onLogin(): void{
-    this.authService.login('balmor.ahumada@gmail.com', '123456')
-      .subscribe(user =>{
-        this.router.navigate(['/'])
-      });
+  login(): void{
+    this.router.navigateByUrl('/dashboard');
+   
   }
 }
